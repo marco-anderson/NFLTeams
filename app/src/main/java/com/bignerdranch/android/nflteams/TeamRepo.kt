@@ -49,6 +49,9 @@ class TeamRepo {
         return flowOf(teams)
     }
 
+    // shorthand syntax when function automatically returns
+    fun fetchById(teamId: String): NflTeam? = teams.find { team -> team.teamID == teamId }
+
     companion object {
         private var INSTANCE: TeamRepo? = null
 

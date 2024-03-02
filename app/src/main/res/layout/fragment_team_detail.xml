@@ -33,30 +33,21 @@
 
     <TextView
         android:id="@+id/team_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toEndOf="@+id/team_logo"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         tools:text="Team Name" />
 
     <TextView
-        android:id="@+id/team_conference"
+        android:id="@+id/team_division"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/team_logo"
-        tools:text="Team Conference" />
-
-    <TextView
-        android:id="@+id/team_division"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/team_conference"
         app:layout_constraintTop_toBottomOf="@+id/team_logo"
         tools:text="Team Division" />
 
@@ -64,10 +55,17 @@
         android:id="@+id/team_stadium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/team_conference"
+        app:layout_constraintTop_toBottomOf="@+id/team_division"
         tools:text="Team Stadium" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

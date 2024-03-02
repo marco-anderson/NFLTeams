@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bignerdranch.android.nflteams.databinding.FragmentTeamListBinding
 import kotlinx.coroutines.launch
@@ -46,7 +47,11 @@ class TeamListFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 teamListViewModel.teamsFlow.collect {teams ->
-                    binding.teamRecyclerView.adapter = TeamListAdapter(teams)
+                    binding.teamRecyclerView.adapter = TeamListAdapter(teams) {teamId ->
+                        findNavController().navigate(
+                            TeamListFragmentDirections.showTeamDetail(teamId)
+                        )
+                    }
                 }
             }
         }
