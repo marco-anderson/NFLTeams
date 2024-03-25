@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211566841133",
+    "project_id": "sp24-android-mh42-nflteams-app",
+    "storage_bucket": "sp24-android-mh42-nflteams-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211566841133:android:af1c7ba02a77ce178c57a4",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.nflteams"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5e84G_BPeb8NrbIIhXU2IWQcn2a9_nrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
